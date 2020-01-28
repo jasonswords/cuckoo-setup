@@ -116,7 +116,7 @@ cuckoo
 ### Install office suite.
 ### Install adobe reader, adobe flash player, java etc etc, whatever software deemed worth installing.
 ### Configure the VM with applications that are required to test the malware such as vulnerable flash player, adobe reader, browsers and office software .
-### Copy the agent.py script from ~/.cuckoo/agent/agent.py to the startup folder on the Windows 7 VM at the ### following path.
+### Copy the agent.py script from ~/.cuckoo/agent/agent.py to the startup folder on the Windows 7 VM at the following path.
 ### Note this is only available if you have created the default Cuckoo directories.
 ### Open file explorer, select the path text box and paste the following directory path in as is:
 ### C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup.
