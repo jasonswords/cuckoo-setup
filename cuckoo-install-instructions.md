@@ -152,6 +152,8 @@ pip2.7.exe install pillow==3.2
 ### DNS Servers – 8.8.8.8
 ###               8.8.4.4
 
+### Ensure that the VM network interface is set to "Host only adapter" amd the network is "vboxnet0", this must be set before the snapsot is taken.
+#### If this is incorrect, the VM cannot communicate with the host machine, throwing an error, host cannot communicate with the VM. Some features will not work correctly, such as the snapshot feature.
 ### Uninstall guest additions and eject the guest additions software from the Windows 7 VM before taking a snapshot, the snapshot must be named "Snapshot1", N.B, this is the default name but with the space removed between "Snapshot" and "1".
 ### Take the snapshot when the Windows 7 VM is at a booted state, where the desktop is visible.
 
