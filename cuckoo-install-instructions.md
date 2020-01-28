@@ -107,16 +107,19 @@ cuckoo
 ```
 
 ## Create windows virtual machine at this stage.
-### Please name VM "cuckoo1", this name is used later in the setup.
+### Please name VM "cuckoo1", to follow this guide.
+
 ### Install Windows XP or Windows 7.
-### virtualbox guest additions can be anabled to transfer files but remove all traces when finished with it.
+### Virtualbox guest additions can be anabled to transfer files but remove all traces when finished with it.
+### If guest additions are used, enable shared clipboard and drag and drop to make things easier.
+## On the Windows VM
 ### Disable Windows firewall and Windows update.
 ### Disable UAC also.
 ### Install python 2.7 for Windows.
-### Install office suite.
-### Install adobe reader, adobe flash player, java etc etc, whatever software deemed worth installing.
-### Configure the VM with applications that are required to test the malware such as vulnerable flash player, adobe reader, browsers and office software .
-### Copy the agent.py script from
+### Install all applications needed, older, more vulnerable versions may produce better analysis.
+### Configure the VM with applications that are required to test the malware such as vulnerable flash player, adobe reader, browsers and office software.
+
+### Copy the agent.py script on the Ubuntu machine from this path.
 ```shell
 ~/.cuckoo/agent/agent.py
 ```
