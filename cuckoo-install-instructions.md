@@ -170,9 +170,9 @@ sudo nano /opt/systemd/vboxhostonly.sh
 ```
 ## Copy following text to file.
 ```shell
-	#!/bin/bash
-	vboxmanage hostonlyif create
-	vboxmanage hostonlyif ipconfig vboxnet0 --ip 192.168.56.1
+#!/bin/bash
+vboxmanage hostonlyif create
+vboxmanage hostonlyif ipconfig vboxnet0 --ip 192.168.56.1
 ```
 ## Make file executable.
 ```shell
@@ -185,14 +185,14 @@ sudo nano /etc/systemd/system/vboxhostonlynic.service
 ```
 ## Copy text to file.
 ```shell
- 	[Unit]
-	Description=Setup VirtualBox Hostonly Adapter
-	After=vboxdrv.service
-	[Service]
-	Type=oneshot
-	ExecStart=/opt/systemd/vboxhostonly.sh
-	[Install]
-	WantedBy=multi-user.target
+[Unit]
+Description=Setup VirtualBox Hostonly Adapter
+After=vboxdrv.service
+[Service]
+Type=oneshot
+ExecStart=/opt/systemd/vboxhostonly.sh
+[Install]
+WantedBy=multi-user.target
 ```
 ## Reload service and set service to run automatically at boot.
 ```shell
