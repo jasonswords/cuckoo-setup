@@ -142,7 +142,7 @@ C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startu
 cd c:\python27
 python get-pip.py
 cd scripts
-pip2.7.exe install pillow
+pip2.7.exe install pillow==3.2
 ```
 ### On Windows 7 VM.
 ### set static ip.
@@ -152,7 +152,7 @@ pip2.7.exe install pillow
 ### DNS Servers – 8.8.8.8
 ###               8.8.4.4
 
-### Uninstall guest additions and eject the guest additions software from the Windows 7 VM before taking a  ### snapshot, the snapshot must be named "Snapshot1", N.B, this is the default name but with the space removed ### between "Snapshot" and "1".
+### Uninstall guest additions and eject the guest additions software from the Windows 7 VM before taking a snapshot, the snapshot must be named "Snapshot1", N.B, this is the default name but with the space removed between "Snapshot" and "1".
 ### Take the snapshot when the Windows 7 VM is at a booted state, where the desktop is visible.
 
 ## Virtualbox setup.
