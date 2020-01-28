@@ -235,11 +235,7 @@ sudo nano cuckoo.conf
 
 	[resultserver]
 	ip = 192.168.56.1
-```shell
-sudo nano auxiliary.conf
-```
-	[sniffer]
-	enabled = yes
+
 ```shell
 sudo nano virtualbox.conf
 ```
