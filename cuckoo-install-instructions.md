@@ -124,11 +124,11 @@ cuckoo
 ~/.cuckoo/agent/agent.py
 ```
 ### To the startup folder on the Windows 7 VM at the following path.
+### Open file explorer on Windows VM, select the path text box and paste the following directory path in as is:
 ```shell
 C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup.
 ```
 ### Note. Agent.py is only available if you have created the default Cuckoo directories.
-### Open file explorer, select the path text box and paste the following directory path in as is:
 
 ## Optional Install.
 ### Install pillow on Windows 7 VM.
