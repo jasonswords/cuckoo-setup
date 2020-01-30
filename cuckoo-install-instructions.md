@@ -293,9 +293,13 @@ cuckoo community
 cuckoo
 ```
 
-## In another terminal run web server
+## In another terminal run web server.
 ```shell
 cuckoo web runserver
 ```
+### If Error: That port is already in use is desplayed, kill any sevice using that port number.
+```shell
+sudo fuser -k 8000/tcp
+```
 
-### Visit localhost:8000 to reach the Cuckoo interface
+### Visit localhost:8000 to reach the Cuckoo interface.
