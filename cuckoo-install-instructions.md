@@ -105,6 +105,10 @@ sudo apt install -y net-tools
 ```shell
 cuckoo
 ```
+## Before the creatio of the VM, a vitural network must be created to provide communications betweem the host and the VM but restrict access the internet.
+```shell
+vboxmanage hostonlyif create
+```
 
 # Create and configure Windows virtual machine now.
 
@@ -163,7 +167,6 @@ pip2.7.exe install pillow==3.2
 
 ## Virtualbox setup.
 ```shell
-vboxmanage hostonlyif create
 vboxmanage hostonlyif ipconfig vboxnet0 --ip 192.168.56.1
 vboxmanage modifyvm cuckoo1 --hostonlyadapter1 vboxnet0
 vboxmanage modifyvm cuckoo1 --nic1 hostonly
