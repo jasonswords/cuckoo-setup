@@ -290,7 +290,7 @@ sudo nano reporting.conf
 #
 
 ### Another method of reporting is MAEC, more information [here](https://maecproject.github.io/documentation/overview/).
-To enable MAEC reporting in cuckoo.
+### To enable MAEC reporting in cuckoo.
 --
 Open this file for editing:
 ```shell
