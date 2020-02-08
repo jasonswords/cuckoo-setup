@@ -300,7 +300,7 @@ sudo nano /usr/local/lib/python2.7/dist-packages/cuckoo/common/config.py
             },
 ```
 ### As seen in this image
-![Image not found] (https://github.com/jasonswords/cuckoo-setup/blob/master/maec.png)
+![alt text] (https://github.com/jasonswords/cuckoo-setup/blob/master/maec.png, "Image to show dictionary")
 ## In the .cuckoo/conf/reporting.conf file, add an additional entry for MAEC
 ```sudo nano /home/$USER/.cuckoo/conf/reporting.conf
 ```
