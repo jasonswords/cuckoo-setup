@@ -288,37 +288,37 @@ sudo nano reporting.conf
 
 
 
-# Another method of reporting is MAEC, more information [here](https://maecproject.github.io/documentation/overview/).
-## To enable MAEC reporting in cuckoo.
-## Open this file for editing:
+## Another method of reporting is MAEC, more information [here](https://maecproject.github.io/documentation/overview/).
+To enable MAEC reporting in cuckoo.
+Open this file for editing:
 ```shell
 sudo nano /usr/local/lib/python2.7/dist-packages/cuckoo/common/config.py
 ```
-## If using nano, ctl + w to search the file, type in "reporting".
-## Add additional entry to the dictionary:
+If using nano, ctl + w to search the file, type in "reporting".
+Add additional entry to the dictionary:
 ```shell
 "maecreport" : { 
                 "enabled": Boolean(False)
             },
 ```
-### As seen in this image
+As seen in this image
 ![alt text] (https://github.com/jasonswords/cuckoo-setup/blob/master/maec.png, "Image to show dictionary")
-## In the .cuckoo/conf/reporting.conf file, add an additional entry for MAEC
+In the .cuckoo/conf/reporting.conf file, add an additional entry for MAEC
 ```shell
 sudo nano /home/$USER/.cuckoo/conf/reporting.conf
 ```
-## Add an additional entry in this file.
+Add an additional entry in this file.
 ```shell
 [maecreport]
 enabled = yes
 ```
-## The final step is to copy the required files from [github](https://github.com/MAECProject/cuckoo/tree/maec5.0-cuckoo2.0/cuckoo/reporting).
-## Two file are needed, maec_api_call_mappings.json and maecreport.py
-## These two files can be saved (click RAW, then right click, save as) and copied into:
+The final step is to copy the required files from [github](https://github.com/MAECProject/cuckoo/tree/maec5.0-cuckoo2.0/cuckoo/reporting).
+Two file are needed, maec_api_call_mappings.json and maecreport.py
+These two files can be saved (click RAW, then right click, save as) and copied into:
 ```shell
 /usr/local/lib/python2.7/dist-packages/cuckoo/reporting
 ```
-## Sudo privileges will be required.
+Sudo privileges will be required.
 The system should be rebooted to ensure changes take effect..
 
 #
