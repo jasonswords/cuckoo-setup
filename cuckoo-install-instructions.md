@@ -112,37 +112,37 @@ vboxmanage hostonlyif create
 
 # Create and configure Windows virtual machine now.
 
-### Please name VM "cuckoo1", to follow this guide.
+Please name VM "cuckoo1", to follow this guide.  
 
-### Install Windows XP or Windows 7.
-### Virtualbox guest additions can be anabled to transfer files but remove all traces when finished with it.
-### If guest additions are used, enable shared clipboard and drag and drop to make things easier.
-## On the Windows VM
-### Disable Windows firewall and Windows update.
-### Disable UAC also.
-### Install python 2.7 for Windows.
-### Install all applications needed, older, more vulnerable versions may produce better analysis.
-### Configure the VM with applications that are required to test the malware such as vulnerable flash player, adobe reader, browsers and office software.
+Install Windows XP or Windows 7.  
+Virtualbox guest additions can be anabled to transfer files but remove all traces when finished with it.  
+If guest additions are used, enable shared clipboard and drag and drop to make things easier.  
+On the Windows VM  
+Disable Windows firewall and Windows update.  
+Disable UAC also.  
+Install python 2.7 for Windows.  
+Install all applications needed, older, more vulnerable versions may produce better analysis.  
+Configure the VM with applications that are required to test the malware such as vulnerable flash player, adobe reader, browsers and office software.
 
-### Copy the agent.py script on the Ubuntu machine from this path.
+#### Copy the agent.py script on the Ubuntu machine from this path.
 ```shell
 ~/.cuckoo/agent/agent.py
 ```
-### To the startup folder on the Windows 7 VM at the following path.
-### Open file explorer on Windows VM, select the path text box and paste the following directory path in as is:
+#### To the startup folder on the Windows 7 VM at the following path.
+#### Open file explorer on Windows VM, select the path text box and paste the following directory path in as is:
 ```shell
 C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup.
 ```
 ### Note. Agent.py is only available if you have created the default Cuckoo directories.
 
-## Optional Install.
-### Install pillow on Windows 7 VM.
-### Pillow is used to take screenshots of what is happening during the process.
-### Download get-pip.py script from https://bootstrap.pypa.io
-### Right click and save target as get-pip.py
-### Save the script as a python script (.py) in c:\python27 directory on the Windows 7 VM.
-### Install pip and setuptools for Windows using the following commands.
-### Open a command prompt and change directory into c:\python27
+### Optional Install.
+Install pillow on Windows 7 VM.  
+Pillow is used to take screenshots of what is happening during the process.  
+Download get-pip.py script from [here](https://bootstrap.pypa.io).  
+Right click and save target as get-pip.py.  
+Save the script as a python script (.py) in c:\python27 directory on the Windows 7 VM.  
+Install pip and setuptools for Windows using the following commands.  
+#### Open a command prompt and change directory into c:\python27
 ```shell
 cd c:\python27
 python get-pip.py
@@ -150,20 +150,20 @@ cd scripts
 pip2.7.exe install pillow==3.2
 
 ```
-## Static IP address
-### On Windows 7 VM.
-### set static ip.
-### IP Address – 192.168.56.101
-### Subnet Mask – 255.255.255.0
-### Default Gateway – 192.168.56.1
-### DNS Servers – 8.8.8.8
-###               8.8.4.4
-
-
-## Snapshot
-### Ensure that the VM network interface is set to "Host only adapter" amd the network is "vboxnet0", this must be set before the snapsot is taken.
-### Uninstall guest additions and eject the guest additions software from the Windows 7 VM before taking a snapshot, the snapshot must be named "Snapshot1", N.B, this is the default name but with the space removed between "Snapshot" and "1".
-### Take the snapshot when the Windows 7 VM is at a booted state, where the desktop is visible.
+#### Set static IP address
+On Windows 7 VM.  
+set static ip.  
+IP Address – 192.168.56.101  
+Subnet Mask – 255.255.255.0  
+Default Gateway – 192.168.56.1  
+DNS Servers – 8.8.8.8
+              8.8.4.4  
+#
+#
+#### Snapshot
+Ensure that the VM network interface is set to "Host only adapter" amd the network is "vboxnet0", this must be set before the snapsot is taken.  
+Uninstall guest additions and eject the guest additions software from the Windows 7 VM before taking a snapshot, the snapshot must be named "Snapshot1", N.B, this is the default name but with the space removed between "Snapshot" and "1".  
+Take the snapshot when the Windows 7 VM is at a booted state, where the desktop is visible.  
 
 ## Virtualbox setup.
 ```shell
@@ -303,8 +303,8 @@ Add additional entry to the dictionary:
                 "enabled": Boolean(False)
             },
 ```
-As seen in this image
-![alt text] (https://github.com/jasonswords/cuckoo-setup/blob/master/maec.png, "Image to show dictionary")
+As seen in this image:  
+![ScreenShot](https://github.com/jasonswords/cuckoo-setup/blob/master/maec.png)  
 In the .cuckoo/conf/reporting.conf file, add an additional entry for MAEC
 ```shell
 sudo nano /home/$USER/.cuckoo/conf/reporting.conf
@@ -314,13 +314,13 @@ Add an additional entry in this file.
 [maecreport]
 enabled = yes
 ```
-The final step is to copy the required files from [github](https://github.com/MAECProject/cuckoo/tree/maec5.0-cuckoo2.0/cuckoo/reporting).
-Two file are needed, maec_api_call_mappings.json and maecreport.py
+The final step is to copy the required files from [github](https://github.com/MAECProject/cuckoo/tree/maec5.0-cuckoo2.0/cuckoo/reporting).  
+Two file are needed, maec_api_call_mappings.json and maecreport.py.  
 These two files can be saved (click RAW, then right click, save as) and copied into:
 ```shell
 /usr/local/lib/python2.7/dist-packages/cuckoo/reporting
 ```
-Sudo privileges will be required.
+Sudo privileges will be required.  
 The system should be rebooted to ensure changes take effect..
 
 #
