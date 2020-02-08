@@ -285,8 +285,10 @@ sudo nano reporting.conf
     
 	[mongodb]
 	enabled = yes
-	
-## Another method of reporting is MAEC, more information [here](https://maecproject.github.io/documentation/overview/).
+
+
+
+# Another method of reporting is MAEC, more information [here](https://maecproject.github.io/documentation/overview/).
 ## To enable MAEC reporting in cuckoo.
 ## Open this file for editing:
 ```shell
@@ -302,7 +304,8 @@ sudo nano /usr/local/lib/python2.7/dist-packages/cuckoo/common/config.py
 ### As seen in this image
 ![alt text] (https://github.com/jasonswords/cuckoo-setup/blob/master/maec.png, "Image to show dictionary")
 ## In the .cuckoo/conf/reporting.conf file, add an additional entry for MAEC
-```sudo nano /home/$USER/.cuckoo/conf/reporting.conf
+```shell
+sudo nano /home/$USER/.cuckoo/conf/reporting.conf
 ```
 ## Add an additional entry in this file.
 ```shell
