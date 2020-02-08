@@ -319,9 +319,10 @@ enabled = yes
 /usr/local/lib/python2.7/dist-packages/cuckoo/reporting
 ```
 ## Sudo privileges will be required.
-## The systemn should be rebooted to ensure changes take effect..
+The system should be rebooted to ensure changes take effect..
 
-
+#
+#
 
 ## Update signatures
 ```shell
