@@ -286,9 +286,10 @@ sudo nano reporting.conf
 	[mongodb]
 	enabled = yes
 
+#
+#
 
-
-## Another method of reporting is MAEC, more information [here](https://maecproject.github.io/documentation/overview/).
+### Another method of reporting is MAEC, more information [here](https://maecproject.github.io/documentation/overview/).
 To enable MAEC reporting in cuckoo.
 --
 Open this file for editing:
