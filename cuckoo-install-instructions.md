@@ -312,7 +312,8 @@ enabled = yes
 ## The final step is to copy the required files from [github](https://github.com/MAECProject/cuckoo/tree/maec5.0-cuckoo2.0/cuckoo/reporting)
 ## Two file are needed, maec_api_call_mappings.json and maecreport.py
 ## These two files can be saved (click RAW, then right click, save as) and copied into:
-```shell/usr/local/lib/python2.7/dist-packages/cuckoo/reporting
+```shell
+/usr/local/lib/python2.7/dist-packages/cuckoo/reporting
 ```
 ## Sudo privileges will be required.
 ## The systemn should be rebooted to ensure changes take effect..
