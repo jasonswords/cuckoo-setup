@@ -105,7 +105,7 @@ sudo apt install -y net-tools
 ```shell
 cuckoo
 ```
-## Before the creatio of the VM, a vitural network must be created to provide communications betweem the host and the VM but restrict access the internet.
+## Before the creation of the VM, a vitural network must be created to provide communications betweem the host and the VM but restrict access the internet.
 ```shell
 vboxmanage hostonlyif create
 ```
