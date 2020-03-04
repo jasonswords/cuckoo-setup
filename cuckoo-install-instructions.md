@@ -133,7 +133,7 @@ Configure the VM with applications that are required to test the malware such as
 ```shell
 C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup.
 ```
-### Note. Agent.py is only available if you have created the default Cuckoo directories.
+### Note. Agent.py is only available if you have not created the default Cuckoo directories.
 
 ### Optional Install.
 Install pillow on Windows 7 VM.  
