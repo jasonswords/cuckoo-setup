@@ -1,0 +1,8 @@
+pandas
+networkx
+plotly
+setuptools
+pydot
+pyparsing
+graphviz
+pydotplus
