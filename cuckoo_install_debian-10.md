@@ -1,4 +1,4 @@
-# Guide to install Cuckoo on Debian 10 Duster working as of 8/05/2020
+# Guide to install Cuckoo on Debian 10 Buster working as of 8/05/2020
 
 ## Install required dependencies
 ```shell
@@ -86,7 +86,7 @@ sudo python setup.py install
 ## Install distrom3
 ```shell
 cd ../..
-sudo -H pip install distorm3
+sudo -H pip install distorm3 m2crypto
 ```
 ## Install yara
 ```shell
