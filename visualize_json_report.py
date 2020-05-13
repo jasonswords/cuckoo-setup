@@ -28,32 +28,39 @@ class VisualizeJsonReport(Report):
             
       		# Get choice from config file
         	choice = self.options['report_type']
-        	print("The visulisation choice is {}".format(choice))
+        	print("The visualisation option is set to  {}".format(choice))
 
         	parameters = list()
+
+        	"""
+        	Option 1: Visualize processes only
+        	Option 2: Visualize processes and network
+        	Option 3: Visualize processes and files
+        	Option 4: Visualize processes and registry
+        	Option 5: Visualize all data 
+        	Default : Visualize processes only
+        	"""
         		
-			# Visualize processes only
 			if choice == int(1):
-				print("Visualize porcesses only")
+				print("Visualize processes only")
 				parameters = ["/usr/bin/python3", script_path, "-f", new_file_path, "-fa", "-ra", "-na", report_path] 
-			# Visualize processes and network
 			elif choice == int(2):
-				print("Visualize porcesses and network data")
+				print("Visualize processes and network data")
 				parameters = ["/usr/bin/python3", script_path, "-f", new_file_path, "-fa", "-ra", report_path]
-			# Visualize processes and files
 			elif choice == int(3):
-				print("Visualize porcesses file data")
+				print("Visualize processes and file data")
 				parameters = ["/usr/bin/python3", script_path, "-f", new_file_path, "-na", "-ra", report_path]
-			# Visualize processes and registry
 			elif choice == int(4):
-				print("Visualize porcesses and registry data")
+				print("Visualize processes and registry data")
 				parameters = ["/usr/bin/python3", script_path, "-f", new_file_path, "-fa", "-na", report_path]
-			# Visualize processes and registry
+			elif choice == int(5):
+				print("Visualize all data")
+				parameters = ["/usr/bin/python3", script_path, "-f", new_file_path, report_path]
 			else:
-				print("Visualize porcesses only, this is the default mode")
+				print("Visualize processes only, this is the default mode")
 				parameters = ["/usr/bin/python3", script_path, "-f", new_file_path, "-fa", "-ra", "-na", report_path]
 
 			subprocess.call(parameters)
 
 		except (UnicodeError, TypeError, IOError) as e:
-			raise CuckooReportError("Failed to generate JSON report: %s" % e)
+			raise CuckooReportError("Failed to generate visualisation graph: %s" % e)

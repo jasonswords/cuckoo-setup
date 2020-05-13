@@ -247,7 +247,7 @@ class CuckooJSONReport(object):
 
                 for arg, val in createproc['arguments'].items():
                     if arg == 'process_identifier':
-                        if val <= 0:
+                        if val < 0:
                             continue
                         else:
                             childpid = val
